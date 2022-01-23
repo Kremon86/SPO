@@ -1,0 +1,171 @@
+Tokens: [{'VAR': 'a'}, {'ASSIGN_OP': '='}, {'NUMBER': '5'}, {'END_COM': ';'}, {'VAR': 'b'}, {'ASSIGN_OP': '='}, {'NUMBER': '1'}, {'END_COM': ';'}, {'VAR': 'c'}, {'ASSIGN_OP': '='}, {'NUMBER': '3'}, {'END_COM': ';'}, {'VAR': 'd'}, {'ASSIGN_OP': '='}, {'LINKED_LIST_KW': 'LinkedList'}, {'END_COM': ';'}, {'VAR': 'd'}, {'POINT': '.'}, {'METHOD': 'push'}, {'LBreaket': '('}, {'NUMBER': '5'}, {'RBreaket': ')'}, {'END_COM': ';'}, {'VAR': 'd'}, {'POINT': '.'}, {'METHOD': 'push'}, {'LBreaket': '('}, {'NUMBER': '1'}, {'RBreaket': ')'}, {'END_COM': ';'}, {'VAR': 'd'}, {'POINT': '.'}, {'METHOD': 'push'}, {'LBreaket': '('}, {'NUMBER': '2'}, {'RBreaket': ')'}, {'END_COM': ';'}, {'VAR': 'd'}, {'POINT': '.'}, {'METHOD': 'push'}, {'LBreaket': '('}, {'NUMBER': '4'}, {'RBreaket': ')'}, {'END_COM': ';'}, {'WHILE': 'while'}, {'LBreaket': '('}, {'VAR': 'a'}, {'LOGICAL_OP': '>'}, {'VAR': 'b'}, {'RBreaket': ')'}, {'LFBreaket': '{'}, {'IF': 'if'}, {'LBreaket': '('}, {'VAR': 'a'}, {'LOGICAL_OP': '>'}, {'VAR': 'c'}, {'RBreaket': ')'}, {'LFBreaket': '{'}, {'VAR': 'c'}, {'ASSIGN_OP': '='}, {'VAR': 'b'}, {'OP': '-'}, {'VAR': 'd'}, {'POINT': '.'}, {'METHOD': 'get'}, {'LBreaket': '('}, {'NUMBER': '3'}, {'RBreaket': ')'}, {'END_COM': ';'}, {'RFBreaket': '}'}, {'ELSE': 'else'}, {'LFBreaket': '{'}, {'IF': 'if'}, {'LBreaket': '('}, {'VAR': 'b'}, {'LOGICAL_OP': '>'}, {'VAR': 'c'}, {'RBreaket': ')'}, {'LFBreaket': '{'}, {'VAR': 'b'}, {'ASSIGN_OP': '='}, {'VAR': 'b'}, {'OP': '+'}, {'NUMBER': '3'}, {'END_COM': ';'}, {'RFBreaket': '}'}, {'ELSE': 'else'}, {'LFBreaket': '{'}, {'VAR': 'a'}, {'ASSIGN_OP': '='}, {'VAR': 'b'}, {'OP': '-'}, {'NUMBER': '3'}, {'END_COM': ';'}, {'RFBreaket': '}'}, {'RFBreaket': '}'}, {'VAR': 'c'}, {'ASSIGN_OP': '='}, {'VAR': 'a'}, {'OP': '+'}, {'NUMBER': '5'}, {'END_COM': ';'}, {'RFBreaket': '}'}, {'VAR': 'd'}, {'POINT': '.'}, {'METHOD': 'remove'}, {'LBreaket': '('}, {'NUMBER': '2'}, {'RBreaket': ')'}, {'END_COM': ';'}, {'VAR': 'a'}, {'ASSIGN_OP': '='}, {'VAR': 'a'}, {'OP': '+'}, {'NUMBER': '4'}, {'END_COM': ';'}]
+Tree:
+ S
+	expr
+		assign_expr
+			VAR a
+			ASSIGN_OP =
+			math_expr
+				NUMBER 5
+	expr
+		assign_expr
+			VAR b
+			ASSIGN_OP =
+			math_expr
+				NUMBER 1
+	expr
+		assign_expr
+			VAR c
+			ASSIGN_OP =
+			math_expr
+				NUMBER 3
+	expr
+		assign_expr
+			VAR d
+			ASSIGN_OP =
+			LINKED_LIST_KW LinkedList
+	expr
+		VAR d
+		method
+			METHOD push
+				LBreaket (
+				math_expr
+					LBreaket (
+					math_expr
+						NUMBER 5
+					RBreaket
+	expr
+		VAR d
+		method
+			METHOD push
+				LBreaket (
+				math_expr
+					LBreaket (
+					math_expr
+						NUMBER 1
+					RBreaket
+	expr
+		VAR d
+		method
+			METHOD push
+				LBreaket (
+				math_expr
+					LBreaket (
+					math_expr
+						NUMBER 2
+					RBreaket
+	expr
+		VAR d
+		method
+			METHOD push
+				LBreaket (
+				math_expr
+					LBreaket (
+					math_expr
+						NUMBER 4
+					RBreaket
+	expr
+		while_expr
+			LBreaket (
+				math_logic
+					VAR a
+					LOGICAL_OP >
+					math_logic
+						VAR b
+			RBreaket
+			LFBreaket
+				expr
+					if_expr
+						LBreaket (
+							math_logic
+								VAR a
+								LOGICAL_OP >
+								math_logic
+									VAR c
+						RBreaket
+						LFBreaket
+							expr
+								assign_expr
+									VAR c
+									ASSIGN_OP =
+									math_expr
+										VAR b
+										OP -
+										math_expr
+											VAR d
+												method
+													METHOD get
+														LBreaket (
+														math_expr
+															LBreaket (
+															math_expr
+																NUMBER 3
+															RBreaket
+						RFBreaket
+					ELSE
+						LFBreaket
+							expr
+								if_expr
+									LBreaket (
+										math_logic
+											VAR b
+											LOGICAL_OP >
+											math_logic
+												VAR c
+									RBreaket
+									LFBreaket
+										expr
+											assign_expr
+												VAR b
+												ASSIGN_OP =
+												math_expr
+													VAR b
+													OP +
+													math_expr
+														NUMBER 3
+									RFBreaket
+								ELSE
+									LFBreaket
+										expr
+											assign_expr
+												VAR a
+												ASSIGN_OP =
+												math_expr
+													VAR b
+													OP -
+													math_expr
+														NUMBER 3
+									RFBreaket
+						RFBreaket
+				expr
+					assign_expr
+						VAR c
+						ASSIGN_OP =
+						math_expr
+							VAR a
+							OP +
+							math_expr
+								NUMBER 5
+			RFBreaket
+	expr
+		VAR d
+		method
+			METHOD remove
+				LBreaket (
+				math_expr
+					LBreaket (
+					math_expr
+						NUMBER 2
+					RBreaket
+	expr
+		assign_expr
+			VAR a
+			ASSIGN_OP =
+			math_expr
+				VAR a
+				OP +
+				math_expr
+					NUMBER 4
+
+['a', '5', '=', 'b', '1', '=', 'c', '3', '=', 'd', 'LinkedList', '=', 'd', '5', 'push', 'd', '1', 'push', 'd', '2', 'push', 'd', '4', 'push', 'a', 'b', '>', 62, 'a', 'c', '>', 39, 'c', 'b', 'd', '3', 'get', '-', '=', '!57', 57, 'b', 'c', '>', 50, 'b', 'b', '3', '+', '=', '!57', 57, 'a', 'b', '3', '-', '=', 'c', 'a', '5', '+', '=', '!24', 'd', '2', 'remove', 'a', 'a', '4', '+', '=']
+{'a': 9, 'b': 1, 'c': 3, 'd': [ 5,1,4,]}
